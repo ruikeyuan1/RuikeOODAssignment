@@ -31,8 +31,6 @@ public class JabberPoint {
 		new SlideViewerFrame(JABVERSION, presentation);
 		//SlideViewerComponent slideViewerComponent = new SlideViewerComponent(new SlideViewerFrame(JABVERSION, presentation),presentation);
 		try {
-			System.out.println(argv.length);
-
 			if (argv.length == 0) { //a demo presentation
 				Accessor.getDemoAccessor().loadFile(presentation, "");
 			} else {
