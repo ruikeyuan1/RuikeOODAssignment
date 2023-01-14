@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="157f48c3-5f30-403c-a413-e6d6ab432724" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/documents/ActivityDiagram.asta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/documents/ClassDiagram Original.asta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/documents/ClassDiagramRefactored.asta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/documents/report.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/documents/useCase.asta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/Accessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/BitmapItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/DemoPresentation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/FontGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/JabberPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/KeyController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/MenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/Presentation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/Slide.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/SlideItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/SlideViewerComponent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/SlideViewerFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/SlideViewerFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/Style.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/Styles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/TextItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/out/production/Jabberpoint_Sourcecode_Students/XMLAccessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/savedPresentation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/Accessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/Accessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/BitmapItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/BitmapItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/DemoPresentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/DemoPresentation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/FontGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/JabberPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/JabberPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/KeyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/KeyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/Presentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/Presentation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/Slide.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/Slide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/SlideViewerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/SlideViewerComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/SlideViewerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/SlideViewerFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/Style.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/Styles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/TextItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/TextItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/XMLAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RuikeOODAssignment/Jabberpoint_Sourcecode_Students/src/XMLAccessor.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/RuikeOODAssignment" />
+  </component>
+  <component name="ProjectId" id="2KKarpQP99HQtVehk6i1YKPuHHp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ruikeyuan/Desktop/OOPD/OOD/gitcode&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="157f48c3-5f30-403c-a413-e6d6ab432724" name="Changes" comment="" />
+      <created>1673725930643</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673725930643</updated>
+      <workItem from="1673725932449" duration="1173000" />
+      <workItem from="1673727111538" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
