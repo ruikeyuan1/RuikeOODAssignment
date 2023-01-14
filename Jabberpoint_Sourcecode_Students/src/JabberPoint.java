@@ -1,8 +1,6 @@
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 import java.io.IOException;
-
-
 
 /** JabberPoint Main Program
  * <p>This program is distributed under the terms of the accompanying
@@ -25,21 +23,15 @@ public class JabberPoint {
 
 	/** The main program */
 	public static void main(String[] argv) {
-		Style.createStyles();
+		Styles.createStyles();
 		Presentation presentation = new Presentation();
-
-		new SlideViewerFrame(JABVERSION, presentation);
-		//SlideViewerComponent slideViewerComponent = new SlideViewerComponent(new SlideViewerFrame(JABVERSION, presentation),presentation);
 		try {
 			if (argv.length == 0) { //a demo presentation
 				Accessor.getDemoAccessor().loadFile(presentation, "");
 			} else {
 				new XMLAccessor().loadFile(presentation, argv[0]);
 			}
-			presentation.setSlideNumber(0);
-			System.out.println("success");
-			System.out.println(presentation.getCurrentSlide());
-			//slideViewerComponent.update(slideViewerComponent.getPresentation(), slideViewerComponent.getPresentation().getCurrentSlide());
+			new SlideViewerFrame(JABVERSION, presentation);
 		} catch (IOException ex) {
 			JOptionPane.showMessageDialog(null,
 					IOERR + ex, JABERR,

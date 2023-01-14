@@ -18,13 +18,12 @@ import javax.swing.JOptionPane;
  * @version 1.5 2010/03/03 Sylvia Stuurman
  * @version 1.6 2014/05/16 Sylvia Stuurman
  */
-public class MenuController extends MenuBar {
 
+public class MenuController extends MenuBar {
 	private Frame parent; //The frame, only used as parent for the Dialogs
 	private SlideViewerComponent slideViewerComponent;
 
 	private static final long serialVersionUID = 227L;
-
 	protected static final String ABOUT = "About";
 	protected static final String FILE = "File";
 	protected static final String EXIT = "Exit";
@@ -37,19 +36,22 @@ public class MenuController extends MenuBar {
 	protected static final String PREV = "Prev";
 	protected static final String SAVE = "Save";
 	protected static final String VIEW = "View";
-
 	protected static final String TESTFILE = "testPresentation.xml";
 	protected static final String SAVEFILE = "savedPresentation.xml";
-
 	protected static final String IOEX = "IO Exception: ";
+
 	protected static final String LOADERR = "Load Error";
 	protected static final String SAVEERR = "Save Error";
-
 	private MenuItem menuItem;
-
-
 	private final XMLAccessor xmlAccessor = new XMLAccessor();
 
+	/**
+	 * the para of type Presentation is changed to SlideViewerComponent
+	 * As SlideViewerComponent controls actions of Presentation so
+	 * there is no longer a need to keep the para Presentation
+	 * @param frame MenuController needs a frame to operate itself
+	 * @param slideViewerComponent MenuController needs a SlideViewerComponent to operate itself
+	 */
 	public MenuController(Frame frame,SlideViewerComponent slideViewerComponent) {
 		this.parent = frame;
 		this.slideViewerComponent = slideViewerComponent;
@@ -63,6 +65,9 @@ public class MenuController extends MenuBar {
 		return new MenuItem(name, new MenuShortcut(name.charAt(0)));
 	}
 
+	/**
+	 * AboutBox class were deleted and the content are moved to here, as that separated class was only for showing the text content.
+	 */
 	private void showAboutBox()
 	{
 		JOptionPane.showMessageDialog(parent,
@@ -79,24 +84,30 @@ public class MenuController extends MenuBar {
 		);
 	}
 
+	/**
+	 * Adds the addFileMenu and its element(s).
+	 */
 	private void addFileMenu()
 	{
 		Menu fileMenu = new Menu(FILE);
 
-		this.addOpen(fileMenu);
-		this.addNew(fileMenu);
-		this.addSave(fileMenu);
+		this.addOpenMenu(fileMenu);
+		this.addNewMenu(fileMenu);
+		this.addSaveManu(fileMenu);
 		fileMenu.addSeparator();
-		this.addExit(fileMenu);
+		this.addExitMenu(fileMenu);
 
 		add(fileMenu);
 	}
 
-	private void addOpen(Menu menu)
+	/**
+	 * Adds the  addOpenMenu and its element(s).
+	 */
+	private void addOpenMenu(Menu menu)
 	{
 		menu.add(this.menuItem = mkMenuItem(OPEN));
 		this.menuItem.addActionListener(actionEvent -> {
-			this.slideViewerComponent.getPresentation().clear();
+			this.slideViewerComponent.clear();
 
 			try {
 				this.xmlAccessor.loadFile(this.slideViewerComponent.getPresentation(), TESTFILE);
@@ -104,27 +115,40 @@ public class MenuController extends MenuBar {
 				throw new RuntimeException(e);
 			}
 			this.slideViewerComponent.getPresentation().setSlideNumber(0);
-			this.slideViewerComponent.update(this.slideViewerComponent.getPresentation(), this.slideViewerComponent.getPresentation().getCurrentSlide());
-
+			this.slideViewerComponent.update(this.slideViewerComponent.getPresentation(),this.slideViewerComponent.getPresentation().getCurrentSlide());
 			parent.repaint();
 		});
 	}
 
-	private void addNew(Menu menu)
+	/**
+	 * Adds the addNewMenu and its element(s).
+	 */
+	private void addNewMenu(Menu menu)
 	{
 		menu.add(this.menuItem = mkMenuItem(NEW));
 		this.menuItem.addActionListener(actionEvent -> {
-			this.slideViewerComponent.getPresentation().clear();
+			this.slideViewerComponent.clear();
 			this.parent.repaint();
 		});
 	}
 
-	private void addSave(Menu menu)
+	/**
+	 * Adds the addSaveManu and its element(s).
+	 */
+	private void addSaveManu(Menu menu)
 	{
 		menu.add(this.menuItem = mkMenuItem(SAVE));
 		this.menuItem.addActionListener(e -> {
+			String inputDataFromUser = JOptionPane.showInputDialog("Give a name to the file to be saved:", null);
 			try {
 				this.xmlAccessor.saveFile(this.slideViewerComponent.getPresentation(), SAVEFILE);
+				if (!(inputDataFromUser.equals("") || inputDataFromUser == null)){
+					String fileSaveName = inputDataFromUser + ".xml";
+					xmlAccessor.saveFile(this.slideViewerComponent.getPresentation(), fileSaveName);
+				} else {
+					JOptionPane.showMessageDialog(parent, "File not saved!",
+							SAVEERR, JOptionPane.ERROR_MESSAGE);
+				}
 			} catch (IOException exc) {
 				JOptionPane.showMessageDialog(parent, IOEX + exc,
 						SAVEERR, JOptionPane.ERROR_MESSAGE);
@@ -132,43 +156,56 @@ public class MenuController extends MenuBar {
 		});
 	}
 
-	private void addExit(Menu menu)
+	/**
+	 * Adds the addExitMenu and its element(s).
+	 */
+	private void addExitMenu(Menu menu)
 	{
 		menu.add(this.menuItem = mkMenuItem(EXIT));
 		this.menuItem.addActionListener(actionEvent -> System.exit(0));
 	}
 
+	/**
+	 * Adds the addViewMenu and its element(s).
+	 */
 	private void addViewMenu()
 	{
 		Menu viewMenu = new Menu(VIEW);
 
-		this.addNext(viewMenu);
-		this.addPrev(viewMenu);
-		this.addGoto(viewMenu);
+		this.addNextMenu(viewMenu);
+		this.addPrevMenu(viewMenu);
+		this.addGotoMenu(viewMenu);
 
 		add(viewMenu);
 	}
 
-	private void addNext(Menu menu)
+	/**
+	 * Adds the addNextMenu and its element(s).
+	 */
+	private void addNextMenu(Menu menu)
 	{
 		menu.add(this.menuItem = mkMenuItem(NEXT));
 		this.menuItem.addActionListener(actionEvent -> {
-			this.slideViewerComponent.getPresentation().nextSlide();
-			this.slideViewerComponent.update(this.slideViewerComponent.getPresentation(), this.slideViewerComponent.getPresentation().getCurrentSlide());
+			this.slideViewerComponent.nextSlide();
 		});
 	}
 
-	private void addPrev(Menu menu)
+	/**
+	 * Adds the addPrevMenu and its element(s).
+	 */
+	private void addPrevMenu(Menu menu)
 	{
 		menu.add(this.menuItem = mkMenuItem(PREV));
 		this.menuItem.addActionListener(actionEvent -> {
-			this.slideViewerComponent.getPresentation().prevSlide();
-			this.slideViewerComponent.update(this.slideViewerComponent.getPresentation(), this.slideViewerComponent.getPresentation().getCurrentSlide());
+			this.slideViewerComponent.prevSlide();
 		});
 
 	}
 
-	private void addGoto(Menu menu)
+	/**
+	 * Adds the addGotoMenu and its element(s).
+	 */
+	private void addGotoMenu(Menu menu)
 	{
 		menu.add(this.menuItem = mkMenuItem(GOTO));
 		this.menuItem.addActionListener(actionEvent -> {
@@ -177,28 +214,26 @@ public class MenuController extends MenuBar {
 
 			if (pageNumber > this.slideViewerComponent.getPresentation().getSize())
 			{
-				this.slideViewerComponent.getPresentation().setSlideNumber(this.slideViewerComponent.getPresentation().getSlideNumber());
-				this.slideViewerComponent.update(this.slideViewerComponent.getPresentation(), this.slideViewerComponent.getPresentation().getCurrentSlide());
+				this.slideViewerComponent.setSlideNumber(this.slideViewerComponent.getPresentation().getSlideNumber());
 			}
 			else if (pageNumber > 0)
 			{
-				this.slideViewerComponent.getPresentation().setSlideNumber(pageNumber - 1);
-				this.slideViewerComponent.update(this.slideViewerComponent.getPresentation(), this.slideViewerComponent.getPresentation().getCurrentSlide());
+				this.slideViewerComponent.setSlideNumber(pageNumber - 1);
 			}
 		});
 	}
 
 	/**
-	 * Adds the helpmenu and its element(s).
+	 * Adds the helpMenu and its element(s).
 	 */
 	private void addHelpMenu()
 	{
 		Menu helpMenu = new Menu(HELP);
-		this.addAbout(helpMenu);
+		this.addAboutMenu(helpMenu);
 		setHelpMenu(helpMenu);		//Needed for portability (Motif, etc.).
 	}
 
-	private void addAbout(Menu menu)
+	private void addAboutMenu(Menu menu)
 	{
 		menu.add(this.menuItem = mkMenuItem(ABOUT));
 		this.menuItem.addActionListener(actionEvent -> showAboutBox());

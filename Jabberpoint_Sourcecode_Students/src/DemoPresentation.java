@@ -9,7 +9,6 @@
  */
 
 class DemoPresentation extends Accessor {
-
 	public void loadFile(Presentation presentation, String unusedFilename) {
 		presentation.setTitle("Demo Presentation");
 		Slide slide;

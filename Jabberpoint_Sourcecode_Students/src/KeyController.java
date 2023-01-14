@@ -12,13 +12,16 @@ import java.awt.event.KeyAdapter;
 */
 
 public class KeyController extends KeyAdapter {
-	private Presentation presentation; //Commands are given to the presentation
-
 	private SlideViewerComponent slideViewerComponent;
 
-	public KeyController(Presentation p, SlideViewerComponent slideViewerComponent) {
+	/**
+	 * the para of type Presentation is changed to SlideViewerComponent
+	 * As SlideViewerComponent controls actions of Presentation so
+	 * there is no longer a need to keep the para Presentation
+	 * @param slideViewerComponent
+	 */
+	public KeyController(SlideViewerComponent slideViewerComponent) {
 		this.slideViewerComponent = slideViewerComponent;
-		presentation = p;
 	}
 
 	public void keyPressed(KeyEvent keyEvent) {
@@ -27,14 +30,12 @@ public class KeyController extends KeyAdapter {
 			case KeyEvent.VK_DOWN:
 			case KeyEvent.VK_ENTER:
 			case '+':
-				this.slideViewerComponent.getPresentation().nextSlide();
-				this.slideViewerComponent.update(this.presentation, this.presentation.getCurrentSlide());
+				this.slideViewerComponent.nextSlide();
 				break;
 			case KeyEvent.VK_PAGE_UP:
 			case KeyEvent.VK_UP:
 			case '-':
-				this.slideViewerComponent.getPresentation().prevSlide();
-				this.slideViewerComponent.update(this.presentation, this.presentation.getCurrentSlide());
+				this.slideViewerComponent.prevSlide();
 				break;
 			case 'q':
 			case 'Q':

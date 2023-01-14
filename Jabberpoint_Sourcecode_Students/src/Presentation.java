@@ -15,15 +15,15 @@ import java.util.ArrayList;
 
 public class Presentation {
 	private String showTitle; //The title of the presentation
-	private ArrayList<Slide> showList = null; //An ArrayList with slides
+	private ArrayList<Slide> listOfSlides = null; //An ArrayList with slides
 	private int currentSlideNumber = 0; //The number of the current slide
 
 	public Presentation() {
-		clear();
+		listOfSlides = new ArrayList<>();
 	}
 
 	public int getSize() {
-		return this.showList.size();
+		return this.listOfSlides.size();
 	}
 
 	public String getTitle() {
@@ -34,39 +34,24 @@ public class Presentation {
 		this.showTitle = nt;
 	}
 
+	public ArrayList<Slide> getListOfSlides()
+	{
+		return this.listOfSlides;
+	}
+
 	//Returns the number of the current slide
 	public int getSlideNumber() {
 		return currentSlideNumber;
 	}
 
-	//Change the current slide number and report it the the window
+	//Change the current slide number and report it the window
 	public void setSlideNumber(int number) {
 		this.currentSlideNumber = number;
 	}
 
-	//Navigate to the previous slide unless we are at the first slide
-	public void prevSlide() {
-		if (this.currentSlideNumber > 0) {
-			setSlideNumber(this.currentSlideNumber - 1);
-	    }
-	}
-
-	//Navigate to the next slide unless we are at the last slide
-	public void nextSlide() {
-		if (this.currentSlideNumber < (this.showList.size()-1)) {
-			setSlideNumber(this.currentSlideNumber + 1);
-		}
-	}
-
-	//Remove the presentation
-	void clear() {
-		this.showList = new ArrayList<Slide>();
-		setSlideNumber(-1);
-	}
-
 	//Add a slide to the presentation
 	public void append(Slide slide) {
-		this.showList.add(slide);
+		this.listOfSlides.add(slide);
 	}
 
 	//Return a slide with a specific number
@@ -74,7 +59,7 @@ public class Presentation {
 		if (number < 0 || number >= getSize()){
 			return null;
 	    }
-		return this.showList.get(number);
+		return this.listOfSlides.get(number);
 	}
 
 	//Return the current slide
